@@ -1,10 +1,12 @@
-RUN-ARGS = --volume=$(shell pwd):/opt/demo \
+BUILD-ARGS = docker build -t
+RUN-ARGS = docker run -it --rm \
+	--volume=$(shell pwd):/opt/demo \
 	--net=host
 
 python:
-	docker build -t demo-python:latest -f Dockerfile.python .
-	docker run -it $(RUN-ARGS) demo-python:latest
+	$(BUILD-ARGS) demo-python:latest -f Dockerfile.python .
+	$(RUN-ARGS) demo-python:latest
 
 haskell:
-	docker build -t demo-haskell:latest -f Dockerfile.haskell .
-	docker run -it $(RUN-ARGS) demo-haskell:latest
+	$(BUILD-ARGS) demo-haskell:latest -f Dockerfile.haskell .
+	$(RUN-ARGS) demo-haskell:latest

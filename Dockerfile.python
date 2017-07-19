@@ -1,7 +1,5 @@
 FROM python:latest
-## currently commented out because I don't have an interent connection
-# RUN pip install ipython toolz hypothesis mypy
+RUN pip install ipython toolz hypothesis mypy pytest-watch
 RUN mkdir -p /opt/demo
 WORKDIR /opt/demo
-# CMD ipython
-CMD python
+CMD ipython
