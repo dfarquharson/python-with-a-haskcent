@@ -23,4 +23,5 @@ def estimate():
     return T.pipe(
         fibs(),
         T.take(10),
-        lambda x: T.nth(random.randint(0, len(x) - 1)))
+        list,
+        lambda x: T.nth(random.randint(0, len(x) - 1), x))
