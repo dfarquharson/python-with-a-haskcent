@@ -9,7 +9,7 @@ def nats():
         a += 1
 
 evens = T.filter(lambda x: x % 2 == 0, nats())
-odds = T.fitler(lambda x: x % 2 == 1, nats())
+odds = T.filter(lambda x: x % 2 == 1, nats())
 
 
 def fibs():
