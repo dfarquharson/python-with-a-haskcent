@@ -1,4 +1,5 @@
 FROM haskell:latest
+RUN cabal update && cabal install QuickCheck
 RUN mkdir -p /opt/demo
 WORKDIR /opt/demo
 CMD ghci
