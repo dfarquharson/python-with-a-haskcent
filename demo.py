@@ -28,9 +28,14 @@ def estimate():
 
 
 from hypothesis import given
-from hypothesis.strategies import integers
+from hypothesis.strategies import integers, lists
 
 
 @given(integers())
 def test_eq_to_inc(x):
     assert x == x + 1
+
+
+# @given(lists(integers()))
+# def test_eq_rev_xs(xs):
+    # assert xs == xs[::-1]
