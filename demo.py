@@ -25,3 +25,12 @@ def estimate():
         T.take(10),
         list,
         lambda x: T.nth(random.randint(0, len(x) - 1), x))
+
+
+from hypothesis import given
+from hypothesis.strategies import integers
+
+
+@given(integers())
+def test_eq_to_inc(x):
+    assert x == x + 1
