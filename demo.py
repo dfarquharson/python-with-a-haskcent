@@ -10,6 +10,9 @@ def nats():
 
 evens = T.filter(lambda x: x % 2 == 0, nats())
 odds = T.filter(lambda x: x % 2 == 1, nats())
+# curried functions can be trivially partially applied
+evens_ = T.filter(lambda x: x % 2 == 0)
+odds_ = T.filter(lambda x: x % 2 == 1)
 
 
 def fibs():
