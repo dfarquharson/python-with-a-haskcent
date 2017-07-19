@@ -12,7 +12,7 @@ python-run: python-build
 python-test: python-build
 	$(RUN-ARGS) demo-python:latest pytest demo.py
 
-haskell-run:
+haskell-build:
 	$(BUILD-ARGS) demo-haskell:latest -f Dockerfile.haskell .
 
 haskell-run: haskell-build
