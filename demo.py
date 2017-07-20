@@ -3,7 +3,7 @@ import random
 
 
 def nats():
-    a = 0
+    a = 1
     while True:
         yield a
         a += 1

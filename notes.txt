@@ -1,0 +1,25 @@
+Makefile apologies: means of abstraction are just strings.
+
+Full disclosure: More of a haskell appreciator and pontificator than a practitioner. Never built anything meaningful in haskell. Have built meaningful things in Clojure, and people pay me to write code mainly in Python and Java.
+
+Start in Haskell:
+Like any good number theorist, let's start with the natural numbers.
+Then define evens with filter (\x -> x `mod` 2 == 0)
+Then define odds with filter (\x -> x `mod` 2 == 1)
+Show how this is the infinite list by doing big takes and drops.
+
+Do these same things in python with generators.
+Show off toolz.curried pipe and compose and map and filter 
+But we need a "practical application", right?
+Let's make an "Agile Story Point estimator"!
+
+Similarities:
+- first class functions
+
+Differences:
+- laziness as default vs opt-in
+- immutable data structures as default vs opt-in (pyrsistent)
+- strong static typing with excellent type inference vs optional manifest typing
+
+Conclusion:
+Haskell is WAY better and more fun and awesome, but you can still apply some of the things you learn at work writing in your "normal" language.
